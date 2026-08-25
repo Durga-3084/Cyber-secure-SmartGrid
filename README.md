@@ -1,36 +1,69 @@
 # Cyber-Secure Smart Grid
 
-A simulation-based smart grid security platform that combines **Machine Learning, renewable energy management, battery optimization, anomaly detection, and cybersecurity mechanisms** to monitor and protect smart-grid operations.
-
-The project simulates a renewable-energy-powered smart grid where solar power generation is predicted using Machine Learning, energy demand is managed between solar, battery, and grid sources, and abnormal energy behavior can be detected through cybersecurity mechanisms.
+A simulation-based **Cyber-Secure Smart Grid platform** that integrates Machine Learning, renewable energy management, battery monitoring, anomaly detection, attack simulation, and cybersecurity mechanisms to demonstrate how smart-grid infrastructure can be monitored and protected.
 
 ---
 
-## Key Features
+## Overview
 
-### 1. Solar Power Prediction
+Modern smart grids rely heavily on digital systems, sensors, communication networks, and automated energy-management mechanisms. While these technologies improve efficiency, they also introduce cybersecurity risks such as manipulated sensor readings and abnormal energy behavior.
 
-Uses a **Random Forest Regression** model to predict solar power generation based on environmental and time-related parameters such as:
+This project provides a **simulation-based smart-grid environment** where solar energy generation is predicted using Machine Learning, available energy is intelligently managed between solar, battery, and grid sources, and cybersecurity mechanisms are used to monitor abnormal activity.
 
+The project combines:
+
+- Solar Power Prediction
+- Intelligent Energy Management
+- Battery Management
+- SHA-256 Authentication
+- Anomaly Detection
+- Attack Simulation
+- Smart Grid Simulation
+
+---
+
+## Objectives
+
+The main objectives of this project are:
+
+- Predict solar power generation using Machine Learning.
+- Improve utilization of renewable energy.
+- Manage energy between solar, battery, and grid sources.
+- Monitor battery status and maintain a reserve capacity.
+- Demonstrate cryptographic authentication using SHA-256.
+- Detect potentially abnormal smart-grid energy data.
+- Simulate cyberattack scenarios.
+- Provide an interactive dashboard for monitoring smart-grid operations.
+
+---
+
+# Key Features
+
+## 1. Solar Power Prediction
+
+The project uses a **Random Forest Regression** model to predict solar power generation.
+
+The model uses environmental and time-related parameters such as:
+
+- Hour
+- Day of Year
 - Temperature
 - Humidity
 - Cloud Cover
-- Hour
-- Day of Year
 
-The prediction helps the energy-management system determine how much renewable energy is expected to be available.
-
----
-
-### 2. Intelligent Energy Management
-
-The system dynamically determines the preferred energy source based on solar availability, energy demand, and battery status.
-
-The priority is:
+### Machine Learning Workflow
 
 ```text
-Solar Energy
+Solar Dataset
      ↓
-Battery
+Data Preprocessing
      ↓
-Grid Backup
+Feature Selection
+     ↓
+Train/Test Split
+     ↓
+Random Forest Regressor
+     ↓
+Model Evaluation
+     ↓
+Solar Power Prediction
